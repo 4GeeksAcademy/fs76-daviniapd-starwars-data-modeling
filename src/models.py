@@ -26,15 +26,27 @@ class Character(Base):
     gender = Column(String(250), nullable=False)
     homeworld_id = Column(Integer, ForeignKey('planet.id'))
 
+class User_Character(Base):
+    __tablename__ = 'User_Character'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    character_id = Column(Integer, ForeignKey('character.id'))
+
 class Planet(Base):
     __tablename__ = 'Planets'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    name = Column(String(250), nullable=False) 
     galactic_location = Column(String(250), nullable=False)
     climate = Column(String(250), nullable=False)
     population = Column(String(250), nullable=False)
     native_species = Column(String(250), nullable=False)
     government  = Column(String(250), nullable=False)
+
+class User_Planet(Base):
+    __tablename__ = 'User_Planet'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    planet_id = Column(Integer, ForeignKey('planet.id'))
 
 class Vehicle(Base):
     __tablename__ = 'Vehicles'
@@ -45,6 +57,12 @@ class Vehicle(Base):
     autonomy = Column(String(250), nullable=False)
     weapons = Column(String(250), nullable=False)
     passengers  = Column(String(250), nullable=False)
+
+class User_Vehicle(Base):
+    __tablename__ = 'User_Vehicle'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    vehicle_id = Column(Integer, ForeignKey('vehicle.id'))
 
 
 ## Draw from SQLAlchemy base
