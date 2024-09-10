@@ -18,7 +18,7 @@ class User(Base):
 
 
 class Planet(Base):
-    __tablename__ = 'planets'
+    __tablename__ = 'planet'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False) 
     galactic_location = Column(String(250), nullable=False)
@@ -28,18 +28,18 @@ class Planet(Base):
     government  = Column(String(250), nullable=False)
 
 class Character(Base):
-    __tablename__ = 'characters'
+    __tablename__ = 'character'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     specie = Column(String(250), nullable=False)
     role = Column(String(250), nullable=False)
-    lifeStatus = Column(String(250), nullable=False)
+    life_status = Column(String(250), nullable=False)
     gender = Column(String(250), nullable=False)
     homeworld_id = Column(Integer, ForeignKey('planet.id'))
     planet = relationship(Planet)
 
 class Vehicle(Base):
-    __tablename__ = 'vehicles'
+    __tablename__ = 'vehicle'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     vehicles_class = Column(String(250), nullable=False)
