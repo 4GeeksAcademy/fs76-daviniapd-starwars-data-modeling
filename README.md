@@ -10,10 +10,10 @@ Here is a 10 min video explaining what UML is: [https://www.youtube.com/watch?v=
 
 We are going to be creating the Entity Relationship Diagram for your StarWars Blog Database, a very similar diagram to this one:
 
-![Starwars Diagram](https://github.com/breatheco-de/exercise-starwars-data-modeling/blob/master/assets/example.png?raw=true)
-[Click to open diagram](https://app.quickdatabasediagrams.com/#/d/LxNXQZ)
+![daviniapd-diagram SW (1)](https://github.com/user-attachments/assets/9dae4531-6573-42b6-b966-69f55e23e3a4)
 
-> 🔥 You can use this FREE tool to practice your diagram for the first time: https://app.quickdatabasediagrams.com/#/d/
+
+> 🔥 You can use this FREE tool to practice your diagram for the first time: https://chartdb.io/
 
 ## 💻 Installation
 
